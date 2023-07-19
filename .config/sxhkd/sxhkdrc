@@ -1,0 +1,13 @@
+# Basic binds
+#maim ss
+shift + alt + 1
+   ~/Me/custom_scripts/screenshots/fullscreen.sh
+
+shift + alt + 2 
+   ~/Me/custom_scripts/screenshots/current-window.sh
+
+shift + alt + 3 
+   ~/Me/custom_scripts/screenshots/selection.sh
+
+shift + alt + 4 
+   ~/Me/custom_scripts/screenshots/fullscreen-save.sh
