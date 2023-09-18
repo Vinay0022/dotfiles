@@ -51,7 +51,7 @@ fi
 sxhkd &
 picom &
 dunst &
-nitrogen --restore &
+feh --bg-max --randomize ~/Me/Wallpapers/* &
 
 
 dwmbar &
