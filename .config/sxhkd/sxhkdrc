@@ -11,3 +11,6 @@ shift + alt + 3
 
 shift + alt + 4 
    ~/Me/custom_scripts/screenshots/fullscreen-save.sh
+
+shift + alt + 5 
+   ~/Me/custom_scripts/screenshots/selection-save.sh
