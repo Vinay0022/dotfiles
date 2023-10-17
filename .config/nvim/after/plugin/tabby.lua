@@ -1,5 +1,8 @@
 vim.o.showtabline = 2
 local theme = {
+    fill = {fg='#f2e9de',
+bg='#3c3836'
+    },
   fill = 'TabLineFill',
   -- Also you can do this: fill = { fg='#f2e9de', bg='#907aa9', style='italic' }
   head = 'TabLine',
@@ -45,4 +48,4 @@ require('tabby.tabline').set(function(line)
     hl = theme.fill,
   }
 end)
-vim.cmd("colorscheme carbonfox")
+vim.cmd("colorscheme gruvbox-baby")

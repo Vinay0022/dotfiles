@@ -1,6 +1,6 @@
 -- Example config in Lua
-vim.g.gruvbox_baby_function_style = "NONE"
-vim.g.gruvbox_baby_keyword_style = "italic"
+-- vim.g.gruvbox_baby_function_style = "NONE"
+-- vim.g.gruvbox_baby_keyword_style = "italic"
 
 -- Each highlight group must follow the structure:
 -- ColorGroup = {fg = "foreground color", bg = "background_color", style = "some_style(:h attr-list)"}
@@ -10,7 +10,8 @@ vim.g.gruvbox_baby_keyword_style = "italic"
 -- Enable telescope theme
 
 -- Enable transparent mode
-vim.g.gruvbox_baby_transparent_mode = 1
+-- vim.g.gruvbox_baby_transparent_mode = 0
+
 
 -- Load the colorscheme
--- vim.cmd[[colorscheme gruvbox-baby]]
+ vim.cmd[[colorscheme gruvbox-baby]]

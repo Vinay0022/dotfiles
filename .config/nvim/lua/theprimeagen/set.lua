@@ -1,7 +1,8 @@
 vim.opt.guicursor = ""
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
+--setting this so neorg {# text}[links] works
+vim.opt.conceallevel=3
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

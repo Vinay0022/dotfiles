@@ -1,6 +1,7 @@
 
+vim.g.maplocalleader = ","
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Oil)
 vim.keymap.set("i", "kj","<ESC>")
 
 
