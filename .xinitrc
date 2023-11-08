@@ -55,4 +55,5 @@ feh --bg-max --randomize ~/Me/Wallpapers/* &
 
 
 dwmbar &
+export _JAVA_AWT_WM_NONREPARENTING=1
 exec dwm
