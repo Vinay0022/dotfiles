@@ -111,14 +111,14 @@ use {
     require'pandoc'.setup()
   end
 }
-
--- file manager
-require('packer').startup(function()
-    use {
-      'stevearc/oil.nvim',
-    }
+require("packer").startup(function()
+  use({
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup()
+    end,
+  })
 end)
--- neorg a note taking and organizing your life plugin
 use {
     "nvim-neorg/neorg",
     config = function()
@@ -158,5 +158,5 @@ extension = "md"
 }
 
 
-end)
 
+end)

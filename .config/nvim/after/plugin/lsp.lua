@@ -1,24 +1,25 @@
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'sh',
-  callback = function()
-    vim.lsp.start({
-      name = 'bash-language-server',
-      cmd = { 'bash-language-server', 'start' },
-    })
-  end,
-})
-local lsp = require("lsp-zero")
+ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
-  'rust_analyzer',
+ -- 'tsserver',
   'jdtls',
+  'rust_analyzer',
+  'marksman',
+  --'clangd',
 })
 
 -- Fix Undefined global 'vim'
-lsp.nvim_workspace()
+lsp.configure('sumneko_lua', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+})
 
 
 local cmp = require('cmp')

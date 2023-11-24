@@ -1,8 +1,7 @@
 vim.opt.guicursor = ""
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
---setting this so neorg {# text}[links] works
-vim.opt.conceallevel=3
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -24,10 +23,12 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
+--vim.opt.signcolumn = "yes" -- column besides the number line
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
---vim.opt.colorcolumn = "80"
+--vim.opt.colorcolumn = "80" -- side column 
 
+vim.g.mapleader = " "
+vim.opt.conceallevel=3
