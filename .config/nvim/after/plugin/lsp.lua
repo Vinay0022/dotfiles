@@ -1,25 +1,15 @@
- local lsp = require("lsp-zero")
+local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
- -- 'tsserver',
-  'jdtls',
+  'tsserver',
   'rust_analyzer',
-  'marksman',
-  --'clangd',
+  'jdtls',
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
+lsp.nvim_workspace()
 
 
 local cmp = require('cmp')

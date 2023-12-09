@@ -7,8 +7,12 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use {
+	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+	  -- or                            , branch = '0.1.x',
+	  requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
-  --colorscheme
   use({
 	  'rose-pine/neovim',
 	  as = 'rose-pine',
@@ -69,94 +73,31 @@ return require('packer').startup(function(use)
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
-  use{ "mfussenegger/nvim-jdtls" }
-use {'echasnovski/mini.nvim'}
-use {'m4xshen/autoclose.nvim'}
---colorscheme
-use {"EdenEast/nightfox.nvim"} -- Packer
---on highlight gives rainbow color
-use {'luisiacc/gruvbox-baby'}
-use {'morhetz/gruvbox'}
-
-use {'andweeb/presence.nvim'}
-use {"numToStr/FTerm.nvim"}
-
-use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.4',
--- or                            , branch = '0.1.x',
-  requires = { {'nvim-lua/plenary.nvim'} }
-}
-
---markdown preview
-use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-})
-
---for tabs above
-  use {'nanozuki/tabby.nvim'}
-
---status bar
-use {'freddiehaddad/feline.nvim'}
-
---icons support
-use {'nvim-tree/nvim-web-devicons'}
---latex
---use {'lervag/vimtex'}
-
---pandoc vim plugin
-use {
-  'aspeddro/pandoc.nvim',
-  config = function()
-    require'pandoc'.setup()
-  end
-}
-require("packer").startup(function()
-  use({
-    "stevearc/oil.nvim",
-    config = function()
-      require("oil").setup()
-    end,
-  })
-end)
-use {
+  --my config
+  use {
     "nvim-neorg/neorg",
     config = function()
         require('neorg').setup {
             load = {
                 ["core.defaults"] = {}, -- Loads default behaviour
                 ["core.concealer"] = {}, -- Adds pretty icons to your documents
-                ["core.integrations.nvim-cmp"] = {},
-                ["core.ui.calendar"] = {},
-
                 ["core.dirman"] = { -- Manages Neorg workspaces
                     config = {
                         workspaces = {
-                            notes = "~/Me/neorg_notes/",
-                            brain_storm= "~/Me/neorg_notes/brain_storm/",
+                            notes = "~/Me/neorg_notes",
                         },
                     },
                 },
-                ["core.export"] = {},
-                ["core.summary"] = {},
-["core.export.markdown"] = {
-config = {
-extension = "md"
-},
-},
-["core.completion"] = {
-    config = {
-        engine = "nvim-cmp"
-    }
-}
-
             },
         }
     end,
     run = ":Neorg sync-parsers",
     requires = "nvim-lua/plenary.nvim",
 }
-
-
+--File Explorer
+  use{
+    "stevearc/oil.nvim",
+  }
 
 end)
+

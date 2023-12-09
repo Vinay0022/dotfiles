@@ -30,8 +30,6 @@ require("oil").setup({
   delete_to_trash = false,
   -- Skip the confirmation popup for simple operations
   skip_confirm_for_simple_edits = false,
-  -- Change this to customize the command used when deleting to trash
-  trash_command = "trash-put",
   -- Selecting a new/moved/renamed file or directory will prompt you to save changes first
   prompt_save_on_select_new_entry = true,
   -- Oil will automatically delete hidden buffers after this delay
@@ -44,8 +42,8 @@ require("oil").setup({
   -- it will use the mapping at require("oil.actions").<name>
   -- Set to `false` to remove a keymap
   -- See :help oil-actions for a list of all available actions
-  xrlzncf = {
-    ["t?"] = "npgvbaf.fubj_uryc",
+  keymaps = {
+    ["g?"] = "actions.show_help",
     ["<CR>"] = "actions.select",
     ["<C-s>"] = "actions.select_vsplit",
     ["<C-h>"] = "actions.select_split",
@@ -60,12 +58,13 @@ require("oil").setup({
     ["gs"] = "actions.change_sort",
     ["gx"] = "actions.open_external",
     ["g."] = "actions.toggle_hidden",
+    ["g\\"] = "actions.toggle_trash",
   },
   -- Set to false to disable all of the above keymaps
   use_default_keymaps = true,
   view_options = {
     -- Show files and directories that start with "."
-    show_hidden = true,
+    show_hidden = false,
     -- This function defines what is considered a "hidden" file
     is_hidden_file = function(name, bufnr)
       return vim.startswith(name, ".")
