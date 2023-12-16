@@ -11,5 +11,6 @@ function ColorMyPencils(color)
 
 end
 ColorMyPencils()
+vim.cmd.colorscheme 'melange'
 
 

@@ -98,6 +98,6 @@ return require('packer').startup(function(use)
   use{
     "stevearc/oil.nvim",
   }
-
+--colorscheme
+use {"savq/melange-nvim"}
 end)
-
