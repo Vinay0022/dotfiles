@@ -100,4 +100,19 @@ return require('packer').startup(function(use)
   }
 --colorscheme
 use {"savq/melange-nvim"}
+--Cody
+use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
+
+--vim be good
+use {'ThePrimeagen/vim-be-good'}
+
+-- for pretty input
+    use {'stevearc/dressing.nvim'}
+--browser
+use({
+    "lalitmee/browse.nvim",
+    requires = { "nvim-telescope/telescope.nvim" },
+})
+
+
 end)

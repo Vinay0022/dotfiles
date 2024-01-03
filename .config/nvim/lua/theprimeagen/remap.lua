@@ -1,5 +1,6 @@
 
 vim.g.mapleader = " "
+vim.g.netrw_browser_viewer="firefox"
 -- Using Oil now vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -53,4 +54,3 @@ end)
 vim.keymap.set("i","kj","<ESC>")
 vim.opt.fillchars = { eob = " "}
 vim.keymap.set("n","<leader>pv",vim.cmd.Oil)
-

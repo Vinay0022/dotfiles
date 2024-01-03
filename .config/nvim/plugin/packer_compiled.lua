@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/Reji/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["browse.nvim"] = {
+    loaded = true,
+    path = "/home/Reji/.local/share/nvim/site/pack/packer/start/browse.nvim",
+    url = "https://github.com/lalitmee/browse.nvim"
+  },
   ["cellular-automaton.nvim"] = {
     loaded = true,
     path = "/home/Reji/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
@@ -144,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/Reji/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["melange-nvim"] = {
+    loaded = true,
+    path = "/home/Reji/.local/share/nvim/site/pack/packer/start/melange-nvim",
+    url = "https://github.com/savq/melange-nvim"
+  },
   neorg = {
     config = { "\27LJ\2\nÍ\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\t\0005\5\a\0005\6\6\0=\6\b\5=\5\n\4=\4\v\3=\3\r\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\1\nnotes\21~/Me/neorg_notes\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
     loaded = true,
@@ -201,6 +211,11 @@ _G.packer_plugins = {
     path = "/home/Reji/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["sg.nvim"] = {
+    loaded = true,
+    path = "/home/Reji/.local/share/nvim/site/pack/packer/start/sg.nvim",
+    url = "https://github.com/sourcegraph/sg.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/Reji/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -216,6 +231,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/Reji/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/Reji/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-fugitive"] = {
     loaded = true,
