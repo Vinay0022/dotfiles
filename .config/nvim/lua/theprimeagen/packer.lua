@@ -13,13 +13,6 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
 
   use({
       "folke/trouble.nvim",
@@ -70,29 +63,28 @@ return require('packer').startup(function(use)
   }
 
   use("folke/zen-mode.nvim")
-  use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
   --my config
-  use {
-    "nvim-neorg/neorg",
-    config = function()
-        require('neorg').setup {
-            load = {
-                ["core.defaults"] = {}, -- Loads default behaviour
-                ["core.concealer"] = {}, -- Adds pretty icons to your documents
-                ["core.dirman"] = { -- Manages Neorg workspaces
-                    config = {
-                        workspaces = {
-                            notes = "~/Me/neorg_notes",
-                        },
-                    },
-                },
-            },
-        }
-    end,
-    run = ":Neorg sync-parsers",
-    requires = "nvim-lua/plenary.nvim",
+    use {
+     "nvim-neorg/neorg",
+    -- config = function()
+    --     require('neorg').setup {
+    --         load = {
+    --             ["core.defaults"] = {}, -- Loads default behaviour
+    --             ["core.concealer"] = {}, -- Adds pretty icons to your documents
+    --             ["core.dirman"] = { -- Manages Neorg workspaces
+    --                 config = {
+    --                     workspaces = {
+    --                         notes = "~/Me/neorg_notes",
+    --                     },
+    --                 },
+    --             },
+    --         },
+    --     }
+    -- end,
+    --  run = ":Neorg sync-parsers",
+    -- requires = "nvim-lua/plenary.nvim",
 }
 --File Explorer
   use{
@@ -100,8 +92,6 @@ return require('packer').startup(function(use)
   }
 --colorscheme
 use {"savq/melange-nvim"}
---Cody
-use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
 
 --vim be good
 use {'ThePrimeagen/vim-be-good'}
@@ -114,5 +104,16 @@ use({
     requires = { "nvim-telescope/telescope.nvim" },
 })
 
+--java
+use 'mfussenegger/nvim-jdtls'
+
+-- prettier
+use('jose-elias-alvarez/null-ls.nvim')
+use('MunifTanjim/prettier.nvim')
+
+-- comments
+use {
+    'numToStr/Comment.nvim',
+}
 
 end)
