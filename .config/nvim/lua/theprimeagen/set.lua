@@ -32,3 +32,15 @@ vim.opt.updatetime = 50
 
 -- my set
 vim.opt.conceallevel = 2
+-- Automatic compilation on save
+vim.cmd([[autocmd FileType tex nnoremap <buffer> <silent> <Leader>ll :VimtexCompile<CR>]])
+
+-- Automatic opening of PDF
+vim.cmd([[autocmd FileType tex nnoremap <buffer> <silent> <Leader>lv :VimtexView<CR>]])
+
+-- Use Zathura as the PDF viewer for Vimtex
+vim.g.vimtex_view_general_viewer = '/usr/bin/zathura'
+
+
+vim.g.tex_flavor = 'latex'
+
