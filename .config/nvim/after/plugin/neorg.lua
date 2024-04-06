@@ -9,5 +9,6 @@ require('neorg').setup {
                 },
             },
         },
+        ["core.qol.todo_items"]={},
     },
 }
