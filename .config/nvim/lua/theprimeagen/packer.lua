@@ -116,4 +116,15 @@ use {
     'numToStr/Comment.nvim',
 }
 
+-- markdown
+use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
+
+use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
+
+--vimtex
+use 'lervag/vimtex'
+
 end)
